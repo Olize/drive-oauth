@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Information for personal Google Drive OAuth clients used with rclone.">
+  <title>Olize Drive Access — Personal rclone OAuth</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.65; color-scheme: light dark; }
+    body { margin: 0 auto; max-width: 52rem; padding: 2rem 1.5rem 5rem; font-size: 1.125rem; }
+    h1, h2 { line-height: 1.2; }
+    a { text-underline-offset: .2em; }
+    .note { border-inline-start: .3rem solid #5285cd; padding: .5rem 1rem; margin-block: 2rem; background: color-mix(in srgb, CanvasText 5%, Canvas); }
+    footer { border-top: 1px solid GrayText; padding-top: 1rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Olize Drive Access</h1>
+    <p>A private, non-commercial Google Drive integration using <a href="https://rclone.org/drive/">rclone</a>.</p>
+    <div class="note"><strong>Not a public service:</strong> this OAuth application is used only by the Google account holder on personally controlled devices. This site does not provide a login, store tokens, or proxy Google Drive traffic.</div>
+    <h2>Purpose and permissions</h2>
+    <p>The Google Drive API is used to mount or access the account holder's Drive files. Separate OAuth clients can be configured for:</p>
+    <ul>
+      <li><strong>VM01 — read/write:</strong> access to view, create, modify, and delete files via rclone (<code>drive</code> scope).</li>
+      <li><strong>Android TV — read-only:</strong> access to list and read files via rclone (<code>drive.readonly</code> scope).</li>
+    </ul>
+    <p>Each OAuth consent is granted by the account holder. Permissions can be revoked at any time in <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>.</p>
+    <h2>How it works</h2>
+    <p>Google authentication happens directly between Google and rclone. OAuth credentials remain in the device's local configuration. This GitHub Pages website is an information page only and contains no login code, analytics, tracker, or access to Drive files.</p>
+    <h2>Privacy</h2>
+    <p>See the <a href="./privacy.html">Privacy Policy / Datenschutzerklärung</a> for the data-handling details.</p>
+    <h2 lang="de">Kurzbeschreibung auf Deutsch</h2>
+    <p lang="de">Diese Seite beschreibt eine ausschließlich privat genutzte Google-Drive-Anbindung über rclone. VM01 erhält Lese- und Schreibrechte, Android TV nur Leserechte. Die Webseite übernimmt weder Anmeldung noch Dateizugriffe und speichert keine Zugangsdaten.</p>
+  </main>
+  <footer><p>Maintained by <a href="https://github.com/Olize">Olize</a> · <a href="./privacy.html">Privacy / Datenschutz</a> · <a href="https://github.com/Olize/drive-oauth">Public source</a></p></footer>
+</body>
+</html>
